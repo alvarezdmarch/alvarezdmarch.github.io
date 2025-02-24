@@ -1,14 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - alvarezdmarch
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Eddy3D-Dev/Eddy3D-UMCF
+  - VIP-SMUR/24Fa-Microclimate-UMCF
+  - VIP-SMUR/25Sp-Microclimate-UMCF
+  - alvarezdmarch/portfolio2
