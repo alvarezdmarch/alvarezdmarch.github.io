@@ -42,20 +42,24 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler-cache: true
+
       - name: Update Bundler
         run: |
-            gem update --system
-            gem install bundler
+          gem update --system
+          gem install bundler
+
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           cache: 'pip'
+
       - name: Cache pip
         uses: actions/cache@v2
         with:
@@ -63,6 +67,7 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
+
       - name: Install and Build 🔧
         run: |
           sudo apt-get update
@@ -71,10 +76,12 @@ jobs:
           export JEKYLL_ENV=production
           bundle install
           bundle exec jekyll build --trace
+
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
