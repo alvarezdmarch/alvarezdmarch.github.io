@@ -399,9 +399,14 @@ ul.task-list input[type="checkbox"] {
 
 .social {
   text-align: center;
+  margin-top: auto;
+  padding-bottom: 3rem;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 
     a {
       img {
