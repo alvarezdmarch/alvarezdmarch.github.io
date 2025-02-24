@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: https://alvarezdmarch.github.io/sitemap.xml
+User-agent: * Disallow: Sitemap: http://www.alvarezdm.me//sitemap.xml
